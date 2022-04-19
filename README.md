@@ -15,7 +15,7 @@ pip install ciclops
 or clone this program to your local directory:
 
 ```
-https://github.com/GuanLab/Predict-Malaria-ART-Resistance.git
+https://github.com/GuanLab/ciclops.git
 ```
 
 ## Usage
