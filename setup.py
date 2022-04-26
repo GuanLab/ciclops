@@ -11,9 +11,9 @@ setuptools.setup(
     description="Pipeline for building clinical outcome prediction models on training dataset and transfer learning on validation datasets.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/GuanLab/Predict-Malaria-ART-Resistance",
+    url="https://github.com/GuanLab/ciclops",
     project_urls={
-        "Bug Tracker": "https://github.com/GuanLab/Predict-Malaria-ART-Resistance/issues",
+        "Bug Tracker": "https://github.com/GuanLab/ciclops/issues",
     },
     keywords=['Bioinformatics','Transfer Learning','Machine Learning','Transcriptomics','Research', 'Clinical Outcome Prediction'],
     classifiers=[
