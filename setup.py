@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="ciclops",
-    version="0.0.3",
+    version="0.0.4",
     author="Elysia Chou, Hanrui Zhang, Yuanfang Guan",
     author_email="elysian@umich.edu, rayezh@umich.edu, gyuanfan@umich.edu",
     description="Pipeline for building clinical outcome prediction models on training dataset and transfer learning on validation datasets.",
@@ -36,7 +36,7 @@ setuptools.setup(
         'scikit-learn >=1.0.2',
         'scipy >=1.8.0',
         'lightgbm >=3.3.2',
-        'shap >=0.35.0',
+        'shap >=0.40.0',
         'xgboost >=1.6.0',
         'tqdm >=4.63.0'
     ]

@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: ciclops
-Version: 0.0.3
+Version: 0.0.4
 Summary: Pipeline for building clinical outcome prediction models on training dataset and transfer learning on validation datasets.
 Home-page: https://github.com/GuanLab/ciclops
 Author: Elysia Chou, Hanrui Zhang, Yuanfang Guan
@@ -60,6 +60,7 @@ optional arguments:
                                    default: lgb
  --no_quantile         If specified, do not use quantile normalization.
  --shap                Conduct SHAP analysis on the training and validation set.
+                       Only for use with LightGBM, XGBoost, and Random Forest.
  -n TOP_GENES, --top_genes TOP_GENES
                        If --shap is specified, indicate number of top genes from both training and validation sets that will be compared in post-SHAP analysis.
                        Default is 20.

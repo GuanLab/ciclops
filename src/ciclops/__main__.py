@@ -29,7 +29,10 @@ def main():
             help = "If specified, do not use quantile normalization.")
     parser.add_argument('--shap',
             action = 'store_true',
-            help = "Conduct SHAP analysis on the validation set.")
+            help = '''
+            Conduct SHAP analysis on the validation set.
+            Only for use with LightGBM, XGBoost, and Random Forest.
+            ''')
     parser.add_argument('-n', '--top_genes', type = int,
             help = '''
             If --shap is specified, indicate number of top genes from both training and validation sets that will be compared in post-SHAP analysis.
@@ -40,12 +43,14 @@ def main():
 
     args = parser.parse_args()
 
+    assert args.model_type in ['lgb','rf','xgb','gpr','lr'], "Model " + args.model_type + " not supported in Ciclops! Use ciclops --help for more information."
+
     if args.no_quantile:
         print("Do not use normalization ...")
 
     if args.shap:
-        print('Perform SHAP analysis after model training.')
-        assert args.top_genes != None, "Must specify -n for post-SHAP analysis!"
+        if args.model_type in ['lgb','xgb','rf']:
+            print('Perform SHAP analysis after model training.')
 
     opts = vars(parser.parse_args())
 
@@ -53,7 +58,6 @@ def main():
 
 
 def run(train_path, valid_path, model_type, no_quantile, shap, top_genes):
-
     # load training dataset
     df_train = pd.read_csv(train_path) # training dataset for building the model
     # load transfer validation dataset
@@ -64,10 +68,14 @@ def run(train_path, valid_path, model_type, no_quantile, shap, top_genes):
     generate_results(df_training, df_validation, model_type, '')
 
     if shap:
-        print("Launching SHAP analysis ...")
-        lauch_SHAP()
-        sum_SHAP_values_of_genes()
-        intersect_of_top_genes(top_genes)
+        if model_type in ['lgb','xgb','rf']:
+            print("Launching SHAP analysis ...")
+            lauch_SHAP()
+            sum_SHAP_values_of_genes()
+            intersect_of_top_genes(top_genes)
+        else:
+            print('--shap was specified, but since the model type is ' + model_type + ', no SHAP analysis will be performed.' )
+
 
 def generate_results(df_training, df_validation, model_type, path_affix):
     """

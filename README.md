@@ -42,6 +42,7 @@ optional arguments:
                                    default: lgb
  --no_quantile         If specified, do not use quantile normalization.
  --shap                Conduct SHAP analysis on the training and validation set.
+                       Only for use with LightGBM, XGBoost, and Random Forest.
  -n TOP_GENES, --top_genes TOP_GENES
                        If --shap is specified, indicate number of top genes from both training and validation sets that will be compared in post-SHAP analysis.
                        Default is 20.
