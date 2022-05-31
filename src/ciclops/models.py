@@ -42,7 +42,6 @@ def train_lighgbm_model(TRAIN):
             train_set = lgb_train,
             #valid_sets = lgb_test,
             #early_stopping_rounds = 5000,
-            num_boost_round=1000
             )
     return gbm
 
@@ -85,7 +84,7 @@ def train_gpr_model(TRAIN):
     -------
     TRAIN: Pandas dataframe
         training set; last column is label
-    
+
     Yields:
     -------
     gpr: Gaussian Process Regression model
@@ -102,7 +101,7 @@ def train_lr_model(TRAIN):
     -------
     TRAIN: Pandas dataframe
         training set; last column is label
-    
+
     Yields:
     -------
     lr: linear regression model
