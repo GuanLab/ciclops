@@ -62,7 +62,7 @@ It will generate the following folders:
 
 ## References
 * For the original paper, please refer to the Guan Lab's 2022 iScience paper: [Machine learning for artemisinin resistance in malaria treatment across in vivo-in vitro platforms](https://doi.org/10.1016/j.isci.2022.103910).
-* STAR Protocol (TBD)
+* STAR Protocol: [Protocol for using Ciclops to build models trained on cross-platform transcriptome data for clinical outcome prediction] (https://doi.org/10.1016/j.xpro.2022.101583)
 * External data for testing/example purposes:
   * Shaw, P.J. et al. (2015) ‘Plasmodium parasites mount an arrest response to dihydroartemisinin, as revealed by whole transcriptome shotgun sequencing (RNA-seq) and microarray study’, BMC Genomics. doi:10.1186/s12864-015-2040-0.
   * GSE59098
