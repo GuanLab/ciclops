@@ -1,12 +1,8 @@
-# Ciclops
-
-Cross-platform training In CLinical Outcome PredictionS (ciclops) is the winning algorithm in [2019 Malaria DREAM Challenge SubChallenge 2](https://www.synapse.org/#!Synapse:syn16924919/wiki/583955).
-
 <p align="center">
 <img src="https://github.com/GuanLab/ciclops/blob/main/cyclops.png" width="50%" height="50%">
 </p>
 
-Ciclops performs transfer learning from one transcriptomic platform's samples to another.
+**Cross-platform training In CLinical Outcome PredictionS (Ciclops)** is the winning algorithm in [2019 Malaria DREAM Challenge SubChallenge 2](https://www.synapse.org/#!Synapse:syn16924919/wiki/583955). Ciclops performs transfer learning from one transcriptomic platform's samples to another.
 
 ## Installation
 
